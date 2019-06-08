@@ -53,19 +53,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void directSort() {
-        int num=10;
-        for (int i = 0; i <= num - 1; i++) {
-            for (int j = 0; j <num-1; j++) {
-                if (items[j] > items[j + 1]) {
-                    int temp;
-                    temp = items[j];
-                    items[j] = items[j + 1];
-                    items[j + 1] = temp;
+//        int num=10;
+//        for (int i = 0; i <= num - 1; i++) {
+//            for (int j = 0; j <num-1; j++) {
+//                if (items[j] > items[j + 1]) {
+//                    int temp;
+//                    temp = items[j];
+//                    items[j] = items[j + 1];
+//                    items[j + 1] = temp;
                     //todo:直接选择排序的具体实现
                     //todo:for循环
+                    //分为有序区和无序区，每一趟排序都在无序区依次对比，记录对比区域最下元素的位置，
+                    //然后把无序区第一元素所记录的最小元素进行交换，无序区少一个，有序区多一个，循环往复直至无序区
+                    //元素数量为0
+                    for (int i=0;i<items.length-1;i++){
+                        int minpos=i;
+                        for (int j=i+1;j<items.length;j++){
+                            if (items[minpos].compareTo(items[j])>0){
+                                minpos = j;
                 }
+                            swap(minpos,i);
             }
         }
+    }
+
+    private void swap(int minpos, int i) {
+
     }
 
     private void generateItems() {
