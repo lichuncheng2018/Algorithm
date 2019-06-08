@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 minpos = j;
                 }
                             swap(minpos,i);
-
             }
         }
     }
