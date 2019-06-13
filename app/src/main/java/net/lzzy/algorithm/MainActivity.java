@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         items[m]=items[n];
         items[n]=tmp;
     }
+    //lalal
 
     private void generateItems() {
         items = new Integer[10];
