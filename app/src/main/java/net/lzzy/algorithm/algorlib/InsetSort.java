@@ -29,6 +29,11 @@ import java.util.Comparator;
         }
 
     }
+
+    @Override
+    public int search(T key) {
+        return 0;
+    }
 }
 
 

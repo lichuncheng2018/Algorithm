@@ -20,6 +20,9 @@ public abstract class BaseSort<T extends Comparable<? super T>>{
 
     }
 
+    protected BaseSort() {
+    }
+
     boolean bigger(T a, T b) {
         compareCount++;
         return a.compareTo(b)>0;
@@ -56,6 +59,8 @@ public abstract class BaseSort<T extends Comparable<? super T>>{
     public int getMoveStep(){
         return moveStep;
     }
+
+    public abstract int search(T key);
 }
 
 

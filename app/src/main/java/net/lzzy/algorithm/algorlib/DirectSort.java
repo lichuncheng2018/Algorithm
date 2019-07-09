@@ -12,47 +12,6 @@ public class DirectSort<T extends Comparable<? super T >>extends BaseSort<T> {
         super(items);
 
     }
-//    //region 1.field字段  最小权限原则
-//
-//    private Integer[] items;
-//    private  long duration;
-//    private int compareCount;
-//    private int swapCount;
-//    private int moveStep;
-//    //endregion
-//
-//    public DirectSort(Integer[] items){  //构造方法（构造器）
-//        this.items=items;
-//        compareCount=0;
-//        swapCount=0;
-//        moveStep=0;
-//    }
-//
-//    boolean bigger(Integer a,Integer b){
-//        compareCount++;
-//        return a.compareTo(b)>0;
-//    }
-//
-//    public  void swap(int i, int j){
-//        int tmp=items[i];
-//        items[i]=items[j];
-//        items[j]=tmp;
-//        swapCount++;
-//    }
-//    public String getResult() {
-//        String display = "";
-//        for (Integer i : items) {
-//            display = display.concat(i + ",");
-//        }
-//        return  display.substring(0, display.length() - 1);
-//    }
-//
-//    @Override
-//    public void Sort() {
-//
-//    }
-
-
     @Override
     public void Sort() {
         //分为有序区和无序区，每一趟排序都在无序区依次进行对比，记录对比区域的最小元素的位置。
@@ -70,33 +29,14 @@ public class DirectSort<T extends Comparable<? super T >>extends BaseSort<T> {
                 //生成方法如下
                 swap(minPos, i);
             }
-            //duration=System.currentTimeMillis()-start;
         }
     }
 
+    @Override
+    public int search(T key) {
+        return 0;
+    }
+
 }
-
-
-
-//    public long getDuration(){
-//        return duration;
-//    }
-//
-//
-//    public int getCompareCount() {
-//        return compareCount;
-//    }
-//
-//
-//    public int getSwapCount(){
-//        return swapCount;
-//    }
-//
-//
-//    public int getMoveStep(){
-//        return moveStep;
-//    }
-//}
-
 
 
